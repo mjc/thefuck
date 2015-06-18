@@ -13,4 +13,3 @@ def get_new_command(command, settings):
     new_cmd = re.findall(r'Did you mean[^\n]*\n\s*([^\n]*)',
                          command.stderr)[0]
     return command.script.replace(broken_cmd, new_cmd, 1)
-
